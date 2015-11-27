@@ -2,20 +2,17 @@
 using System.Collections;
 
 public class Shoot : MonoBehaviour {
-    public int speed = 4;
-    private Rigidbody2D rb;
+    public float speed = 4f;
+
 	// Use this for initialization
 	void Start () {
-
-    rb = gameObject.GetComponent<Rigidbody2D>();
-        // rigidbody2D.velocity.y = speed;
-        rb.MovePosition(rb.position * speed);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0,speed);
     }
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+
+    }
 
     
 
