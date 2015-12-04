@@ -36,14 +36,21 @@ public class MovementBasic : MonoBehaviour {
 
 
 
-
         if (Input.GetKey(KeyCode.LeftArrow)){
-            transform.Translate(-Vector2.right * speed * Time.deltaTime);
-            print("Left arrow was pressed");
+            if (transform.position.x > -10.6)
+            {
+                transform.Translate(-Vector2.right * speed * Time.deltaTime);
+                //print("Left arrow was pressed");
+
+            }
         }
         else if (Input.GetKey(KeyCode.RightArrow)){
-            transform.Translate(Vector2.right * speed * Time.deltaTime);
-            print("Right arrow was pressed");
+            if (transform.position.x < 10.6)
+            {
+                transform.Translate(Vector2.right * speed * Time.deltaTime);
+                //print("Right arrow was pressed");
+
+            }
         }
 
 
@@ -52,6 +59,7 @@ public class MovementBasic : MonoBehaviour {
     void Shoot()
     {
             Instantiate(bullet, transform.position, Quaternion.identity);
+
     }
 
 }
