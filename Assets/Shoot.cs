@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Shoot : MonoBehaviour {
-    public float speed = 4f;
+    public float speed = 0f;
 
 	// Use this for initialization
 	void Start () {
